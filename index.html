@@ -1,10 +1,66 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>我的網頁</title>
-  </head>	
-  <body>
-    <h1>Hello, HTML5!</h1>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Information</title>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    #profile {
+      border: 2px solid red;
+      border-radius: 50%;
+    }
+
+    #buttons {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>學生資訊</h1>
+  <p>學號: <span id="studentId">41118156</span></p>
+  <p>姓名: <span id="name">黃俊傑</span></p>
+  <img id="profile" src="C:\Users\user\Desktop\1225-1.jpg" alt="Profile Picture" width="150">
+  <div id="buttons">
+    <button onclick="adjustText()">更換字體</button>
+    <button onclick="adjustProfile()">更換圓圈大小</button>
+    <button onclick="changePicture()">更換照片</button>
+  </div>
+  <div>
+    <a href="htmlanswer.txt" target="_blank"> HTML源代碼</a>
+    <a href="jsanswer.txt" target="_blank">JS源代碼</a>
+  </div>
+
+  <script>
+    function adjustText() {
+      const studentId = document.getElementById('studentId');
+      const name = document.getElementById('name');
+
+      // Adjust font size and color
+      studentId.style.fontSize = '20px';
+      studentId.style.color = 'blue';
+
+      name.style.fontSize = '20px';
+      name.style.color = 'green';
+    }
+
+    function adjustProfile() {
+      const profile = document.getElementById('profile');
+
+      // Adjust profile picture
+      profile.style.borderRadius = '50%';
+      profile.style.border = '4px solid red';
+    }
+
+    function changePicture() {
+      const profile = document.getElementById('profile');
+
+      // Change the source to the new picture
+      profile.src = 'photo2.jpg';
+    }
+  </script>
+</body>
 </html>
